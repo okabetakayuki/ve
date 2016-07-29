@@ -35,10 +35,13 @@ frame[0][22] = $func
 
 # draw graph
 for x in 0..79 do
-###
-### 分担2
-###
+ a = x/80.0
+ y = 24 - f(a)*24
+  if y>-1 then
+    frame[y][x] = '*'
+  end
 end
+
 
 # printout
 frame.each do |line|
